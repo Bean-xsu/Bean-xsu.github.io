@@ -1,0 +1,20 @@
+{
+  "name": "v-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vuepress": "^1.9.7"
+  },
+  "scripts": {
+    "dev": "vuepress dev docs --temp .temp", 
+    "build": "vuepress build docs",
+    "deploy": "sh deploy.sh"
+  }
+}
