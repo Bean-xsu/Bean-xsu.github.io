@@ -27,4 +27,8 @@ Vue-press+[v-doing](https://doc.xugaoyi.com/)主题+npm8.0以上版本
    npm run deploy
    ```
 
-   
+
+## 博客地址
+
+https://hiyiin.github.io
+
