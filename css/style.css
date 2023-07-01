@@ -1,0 +1,252 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+/* 导航栏样式 */
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.95);
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	z-index: 1;
+}
+
+.nav-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 60px;
+	padding: 0 20px;
+}
+
+.logo a {
+	font-size: 24px;
+	font-weight: bold;
+	color: #333;
+	text-decoration: none;
+}
+
+.menu-toggle {
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 24px;
+	padding: 5px;
+	cursor: pointer;
+}
+
+.menu-toggle span {
+	display: block;
+	width: 24px;
+	height: 3px;
+	background-color: #333;
+}
+
+.menu-li a:hover{
+	color: aqua;
+}
+
+@media (max-width: 768px) {
+	.menu-toggle {
+		display: flex;
+	}
+
+	.menu {
+		display: none;
+		flex-direction: column;
+		position: absolute;
+		top: 60px;
+		right: 0;
+		width: 20%;
+		background-color: rgba(255, 255, 255, 0.9);
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		z-index: 1;
+	}
+
+	.menu li {
+		display: none;
+		margin: 10px 20px;
+	}
+
+	.menu li a {
+		font-size: 16px;
+		color: #333;
+		text-decoration: none;
+	}
+
+	.menu-toggle.active span:nth-child(2) {
+		transform: rotate(45deg) translate(5px, 5px);
+	}
+
+	.menu-toggle.active span:nth-child(3) {
+		transform: rotate(-45deg) translate(7px, -6px);
+	}
+
+	.menu-toggle.active span:nth-child(1),
+	.menu-toggle.active span:nth-child(2),
+	.menu-toggle.active span:nth-child(3) {
+		background-color: #333;
+	}
+}
+
+.menu {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.menu li {
+	margin: 0 10px;
+}
+
+.menu li a {
+	font-size: 16px;
+	color: #333;
+	text-decoration: none;
+}
+
+/* 横幅样式 */
+header {
+	height: 500px;
+	background-image: url('../images/banner.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+.banner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	padding: 0 20px;
+}
+
+.banner h1 {
+	font-size: 48px;
+	font-weight: bold;
+	color: #fff;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.banner p {
+	font-size: 24px;
+	color: #fff;
+	text-align: center;
+	margin-bottom: -80px;
+}
+
+.banner button {
+	padding: 10px 20px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	background-color: #333;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+@media (max-width: 768px) {
+	header {
+		height: 300px;
+	}
+
+	.banner h1 {
+		font-size: 36px;
+		margin-bottom: 20px;
+	}
+
+	.banner p {
+		font-size: 20px;
+		margin-bottom: -60px;
+	}
+
+	.banner button {
+		padding: 8px 16px;
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 480px) {
+	.nav-container {
+		padding: 0 10px;
+	}
+
+	.logo a {
+		font-size: 20px;
+	}
+
+	.menu-toggle {
+		height: 20px;
+	}
+
+	.menu-toggle span {
+		height: 2px;
+	}
+
+	.menu li a {
+		font-size: 14px;
+	}
+
+	.banner h1 {
+		font-size: 28px;
+		margin-bottom: 10px;
+	}
+
+	.banner p {
+		font-size: 16px;
+		margin-bottom: 20px;
+	}
+
+	.banner button {
+		padding: 8px 12px;
+		font-size: 12px;
+	}
+}
+
+.image-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.image-row {
+	display: flex;
+	justify-content: center;
+	margin: 10px 0;
+}
+
+.image-item {
+	/* 设置每个图片项的宽度 */
+	height: 80%;
+	/* 设置每个图片项的高度 */
+}
+
+img {
+	max-width: 100%;
+	/* 限制图片最大宽度以适应容器 */
+	max-height: 100%;
+	/* 限制图片最大高度以适应容器 */
+}
+
+@media (max-width: 768px) {
+	.image-row {
+		flex-direction: column;
+		/* 在移动设备上将图片行的方向设置为竖直方向 */
+		align-items: center;
+		/* 在移动设备上将图片行的对齐方式设置为居中对齐 */
+	}
+
+	.image-item {
+		width: 100%;
+		/* 在移动设备上将图片项的宽度设置为100% */
+		height: auto;
+		/* 在移动设备上将图片项的高度设置为自适应 */
+	}
+}
