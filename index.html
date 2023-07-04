@@ -20,9 +20,9 @@
 			</div>
 			<ul class="menu">
 				<li class="menu-li"><a href="#">Home</a></li>
-				<li class="menu-li project" onclick="openSub()"><a href="#">Project</a>
+				<li class="menu-li project"><a href="#">Project</a>
 					<ul class="sub-menu">
-						<li><a href="chatgpt_with_XAI.html">ChatGPT with XAI </a></li>
+						<li><a href="chatgpt_with_XAI.html">chat-gpt with XAI</a></li>
 					</ul>
 				</li>
 				<li class="menu-li"><a href="#">Github</a></li>
@@ -38,79 +38,17 @@
 	</header>
 
 	<main>
-		<div class="image-list">
+		<!-- <div class="image-list">
 			<div class="image-row">
 				<div class="image-item">
 					<img src="./images/count_of_ds_pred_by_year.png" alt="your image 1">
 				</div>
 			</div>
-
-			<div class="image-row">
-				<div class="image-item">
-					<img src="./images/count_of_dtype_pred_by_year.png" alt="your image 2">
-				</div>
-			</div>
-
-			<div class="image-row">
-				<div class="image-item">
-					<img src="./images/count_of_isXAI_pred_by_year.png" alt="your image 3">
-				</div>
-			</div>
-
-			<div class="image-row">
-				<div class="image-item">
-					<img src="./images/count_of_method_pred_by_year.png" alt="your image 4">
-				</div>
-			</div>
-
-			<div class="image-row">
-				<div class="image-item">
-					<img src="./images/count_of_method_type_pred_by_year.png" alt="your image 5">
-				</div>
-			</div>
-
-			<div class="image-row">
-				<div class="image-item">
-					<img src="./images/count_of_specialty_pred_by_year.png" alt="your image 6">
-				</div>
-			</div>
-
-			<div class="image-row">
-				<div class="image-item">
-					<img src="./images/frequency_of_ds_pred_by_year.png" alt="your image 7">
-				</div>
-			</div>
-
-			<div class="image-row">
-				<div class="image-item">
-					<img src="./images/frequency_of_dtype_pred_by_year.png" alt="your image 8">
-				</div>
-			</div>
-
-			<div class="image-row">
-				<div class="image-item">
-					<img src="./images/frequency_of_isXAI_pred_by_year.png" alt="your image 9">
-				</div>
-			</div>
-
-			<div class="image-row">
-				<div class="image-item">
-					<img src="./images/frequency_of_method_pred_by_year.png" alt="your image 10">
-				</div>
-			</div>
-
-			<div class="image-row">
-				<div class="image-item">
-					<img src="./images/frequency_of_method_type_pred_by_year.png" alt="your image 11">
-				</div>
-			</div>
-
-			<div class="image-row">
-				<div class="image-item">
-					<img src="./images/frequency_of_specialty_pred_by_year.png" alt="your image 12">
-				</div>
-			</div>
-		</div>
+		</div> -->
+		<ul class="link-list">
+			<li><a href="chatgpt_with_XAI.html">chat-gpt with XAI</a></li>
+			<li><a href="chatgpt_with_XAI.html">chat-gpt with fairMl</a></li>
+		</ul>
 	</main>
 
 	<footer>
@@ -140,9 +78,9 @@
 		}, 3000);
 	});
 
-	function openSub() {
-		subMenu.style.display = "block";
-	}
+	project.addEventListener("touchend", function () {
+		location.href = "chatgpt_with_XAI.html"
+	});
 </script>
 
 </html>
