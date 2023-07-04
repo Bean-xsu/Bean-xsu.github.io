@@ -20,7 +20,11 @@
 			</div>
 			<ul class="menu">
 				<li class="menu-li"><a href="#">Home</a></li>
-				<li class="menu-li"><a href="#">Project</a></li>
+				<li class="menu-li project" onclick="openSub()"><a href="chatgpt_with_XAI.html">Project</a>
+					<ul class="sub-menu">
+						<li><a href="chatgpt_with_XAI.html">ChatGPT with XAI ></a></li>
+					</ul>
+				</li>
 				<li class="menu-li"><a href="#">Github</a></li>
 			</ul>
 		</div>
@@ -115,5 +119,30 @@
 
 	<script src="./js/script.js"></script>
 </body>
+<script>
+	var project = document.querySelector(".project");
+	// 获取二级菜单
+	var subMenu = document.querySelector(".sub-menu");
+
+	// 添加鼠标移入事件监听器
+	project.addEventListener("mouseover", function () {
+		// 在鼠标移入时将二级菜单设置为可见
+		subMenu.style.display = "block";
+	});
+
+	// 添加鼠标移出事件监听器
+	project.addEventListener("mouseout", function () {
+		// 在鼠标移出后3秒将二级菜单设置为不可见
+		setTimeout(() => {
+			if (!subMenu.querySelectorAll('*')[0].matches(":hover")) {
+				subMenu.style.display = "none";
+			}
+		}, 3000);
+	});
+
+	function openSub() {
+		subMenu.style.display = "block";
+	}
+</script>
 
 </html>
