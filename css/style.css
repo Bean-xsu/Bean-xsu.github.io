@@ -113,7 +113,7 @@ nav {
 	display: none;
 	position: absolute;
 	top: 100%;
-	right: 0;
+	right: 20px;
 	/* z-index: 1; */
 	list-style: none;
 }
@@ -268,4 +268,24 @@ img {
 		height: auto;
 		/* 在移动设备上将图片项的高度设置为自适应 */
 	}
+}
+
+/* 定义链接列表样式 */
+.link-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	margin-top: 50px;
+	text-align: center;
+	line-height: 5;
+}
+
+.link-list li a{
+	font-size: 16px;
+	color: #333;
+	/* text-decoration: none; */
+}
+
+.link-list li a:hover {
+	color: aqua;
 }
