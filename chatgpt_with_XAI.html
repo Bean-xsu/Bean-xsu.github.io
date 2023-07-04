@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ChatGPT With XAI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* Style the tab buttons */
+        .tab {
+            overflow: hidden;
+            background-color: #f1f1f1;
+            width: 50%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tab button {
+            background-color: inherit;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+            width: 50%;
+            text-align: center;
+        }
+
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            text-align: center;
+        }
+
+        .tabcontent img {
+            display: block;
+            margin: 0 auto;
+            max-width: 80%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="tab">
+        <button class="tablinks active" onclick="openTab(event, 'Frequency')">Frequency</button>
+        <button class="tablinks" onclick="openTab(event, 'Count')">Count</button>
+    </div>
+
+    <!-- Tab content -->
+    <div id="Frequency" class="tabcontent" style="display:block;">
+        <img src="./images/XAI/Frequency of ds_pred by PubYear.png" alt="Frequency Image">
+        <img src="./images/XAI/Frequency of dtype_pred by PubYear.png" alt="Frequency Image">
+        <img src="./images/XAI/Frequency of method_pred by PubYear.png" alt="Frequency Image">
+        <img src="./images/XAI/Frequency of method_type_pred by PubYear.png" alt="Frequency Image">
+        <img src="./images/XAI/Frequency of specialty_pred by PubYear.png" alt="Frequency Image">
+    </div>
+
+    <div id="Count" class="tabcontent">
+        <img src="./images/XAI/Count of ds_pred by PubYear.png" alt="Count Image">
+        <img src="./images/XAI/Count of method_pred by PubYear.png" alt="Frequency Image">
+        <img src="./images/XAI/Count of method_type_pred by PubYear.png" alt="Frequency Image">
+        <img src="./images/XAI/Count of specialty_pred by PubYear.png" alt="Frequency Image">
+        <img src="./images/XAI/Count of type_pred by PubYear.png" alt="Frequency Image">
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+
+</body>
+
+</html>
