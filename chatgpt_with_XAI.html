@@ -9,7 +9,7 @@
         .tab {
             overflow: hidden;
             background-color: #f1f1f1;
-            width: 50%;
+            width: 80%;
             margin: 0 auto;
             display: flex;
             justify-content: center;
@@ -17,7 +17,6 @@
         }
 
         .tab button {
-            background-color: inherit;
             border: none;
             outline: none;
             cursor: pointer;
@@ -38,16 +37,41 @@
 
         /* Style the tab content */
         .tabcontent {
-            display: none;
+            display: flex;
             padding: 6px 12px;
             text-align: center;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
         }
 
-        .tabcontent img {
-            display: block;
-            margin: 0 auto;
-            max-width: 80%;
+        .container {
+            width: 80%;
+            display: flex;
+            /* 将容器设置为弹性盒子 */
+            flex-wrap: wrap;
+            /* 允许换行 */
+            justify-content: center;
+            /* 水平居中 */
+            align-items: center;
+            /* 垂直居中 */
+        }
+
+        .item {
+            flex-basis: calc(50% - 10px);
+            /* 每个项目占据50%的宽度 */
+            margin: 5px;
+            /* 项目之间的边距 */
+        }
+
+        .item img {
+            display: inline;
+            /* 将图片设置为块级元素 */
+            width: 90%;
+            margin-left: 25%;
+            /* 图片宽度为100% */
             height: auto;
+            /* 图片高度自适应 */
         }
     </style>
 </head>
@@ -61,19 +85,43 @@
 
     <!-- Tab content -->
     <div id="Frequency" class="tabcontent" style="display:block;">
-        <img src="./images/Frequency of ds_pred by PubYear.png" alt="Frequency Image">
-        <img src="./images/Frequency of dtype_pred by PubYear.png" alt="Frequency Image">
-        <img src="./images/Frequency of method_pred by PubYear.png" alt="Frequency Image">
-        <img src="./images/Frequency of method_type_pred by PubYear.png" alt="Frequency Image">
-        <img src="./images/Frequency of specialty_pred by PubYear.png" alt="Frequency Image">
+        <div class="container">
+            <div class="item">
+                <img src="./images/XAI/Frequency of ds_pred by PubYear.png" alt="Frequency Image">
+            </div>
+            <div class="item">
+                <img src="./images/XAI/Frequency of dtype_pred by PubYear.png" alt="Frequency Image">
+            </div>
+            <div class="item">
+                <img src="./images/XAI/Frequency of method_pred by PubYear.png" alt="Frequency Image">
+            </div>
+            <div class="item">
+                <img src="./images/XAI/Frequency of method_type_pred by PubYear.png" alt="Frequency Image">
+            </div>
+            <div class="item">
+                <img src="./images/XAI/Frequency of specialty_pred by PubYear.png" alt="Frequency Image">
+            </div>
+        </div>
     </div>
 
-    <div id="Count" class="tabcontent">
-        <img src="./images/Count of ds_pred by PubYear.png" alt="Count Image">
-        <img src="./images/Count of method_pred by PubYear.png" alt="Frequency Image">
-        <img src="./images/Count of method_type_pred by PubYear.png" alt="Frequency Image">
-        <img src="./images/Count of specialty_pred by PubYear.png" alt="Frequency Image">
-        <img src="./images/Count of type_pred by PubYear.png" alt="Frequency Image">
+    <div id="Count" class="tabcontent" style="display:none;">
+        <div class="container">
+            <div class="item">
+                <img src="./images/XAI/Count of ds_pred by PubYear.png" alt="Count Image">
+            </div>
+            <div class="item">
+                <img src="./images/XAI/Count of method_pred by PubYear.png" alt="Count Image">
+            </div>
+            <div class="item">
+                <img src="./images/XAI/Count of method_type_pred by PubYear.png" alt="Count Image">
+            </div>
+            <div class="item">
+                <img src="./images/XAI/Count of specialty_pred by PubYear.png" alt="Count Image">
+            </div>
+            <div class="item">
+                <img src="./images/XAI/Count of type_pred by PubYear.png" alt="Count Image">
+            </div>
+        </div>
     </div>
 
     <script>
