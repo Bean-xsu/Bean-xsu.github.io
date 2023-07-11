@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ChatGPT with fairAI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* Style the tab buttons */
+        .tab {
+            overflow: hidden;
+            background-color: #f1f1f1;
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tab button {
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+            width: 50%;
+            text-align: center;
+        }
+
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: flex;
+            padding: 6px 12px;
+            text-align: center;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 80%;
+            display: flex;
+            /* 将容器设置为弹性盒子 */
+            flex-wrap: wrap;
+            /* 允许换行 */
+            justify-content: center;
+            /* 水平居中 */
+            align-items: center;
+            /* 垂直居中 */
+        }
+
+        .item {
+            flex-basis: calc(50% - 10px);
+            /* 每个项目占据50%的宽度 */
+            margin: 5px;
+            /* 项目之间的边距 */
+        }
+
+        .item img {
+            display: inline;
+            /* 将图片设置为块级元素 */
+            width: 90%;
+            margin-left: 25%;
+            /* 图片宽度为100% */
+            height: auto;
+            /* 图片高度自适应 */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="tab">
+        <button class="tablinks active" onclick="openTab(event, 'Frequency')">Frequency</button>
+        <button class="tablinks" onclick="openTab(event, 'Count')">Count</button>
+    </div>
+
+    <!-- Tab content -->
+    <div id="Frequency" class="tabcontent" style="display:block;">
+        <div class="container">
+            <div class="item">
+                <img src="./images/fairAI/Frequency of Data bias or algorithm bias__pred by PubYear.png"
+                    alt="Frequency Image">
+            </div>
+            <div class="item">
+                <img src="./images/fairAI/Frequency of Fairness method_pred by PubYear.png" alt="Frequency Image">
+            </div>
+            <div class="item">
+                <img src="./images/fairAI/Frequency of Healthcare data type_pred by PubYear.png" alt="Frequency Image">
+            </div>
+            <div class="item">
+                <img src="./images/fairAI/Frequency of Study nature_pred by PubYear.png" alt="Frequency Image">
+            </div>
+            <div class="item">
+                <img src="./images/fairAI/Frequency of Whether bias was handled__pred by PubYear.png"
+                    alt="Frequency Image">
+            </div>
+            <div class="item">
+                <img src="./images/fairAI/Frequency of Whether causal inference is involved_ pred by PubYear.png"
+                    alt="Frequency Image">
+            </div>
+            <div class="item">
+                <img src="./images/fairAI/Frequency of Whether FL or block-chain is involved__pred by PubYear.png"
+                    alt="Frequency Image">
+            </div>
+            <div class="item">
+                <img src="./images/fairAI/Frequency of Whether XAI is involved__pred by PubYear.png"
+                    alt="Frequency Image">
+            </div>
+        </div>
+    </div>
+
+    <div id="Count" class="tabcontent" style="display:none;">
+        <div class="container">
+            <div class="item">
+                <img src="./images/fairAI/Count of Data bias or algorithm bias__pred by PubYear.png" alt="Count Image">
+            </div>
+            <div class="item">
+                <img src="./images/fairAI/Count of Fairness method_pred by PubYear.png" alt="Count Image">
+            </div>
+            <div class="item">
+                <img src="./images/fairAI/Count of Healthcare data type_pred by PubYear.png" alt="Count Image">
+            </div>
+            <div class="item">
+                <img src="./images/fairAI/Count of Study nature_pred by PubYear.png" alt="Count Image">
+            </div>
+            <div class="item">
+                <img src="./images/fairAI/Count of Whether bias was handled__pred by PubYear.png" alt="Count Image">
+            </div>
+            <div class="item">
+                <img src="./images/fairAI/Count of Whether causal inference is involved__pred by PubYear.png"
+                    alt="Count Image">
+            </div>
+            <div class="item">
+                <img src="./images/fairAI/Count of Whether FL or block-chain is involved__pred by PubYear.png"
+                    alt="Count Image">
+            </div>
+            <div class="item">
+                <img src="./images/fairAI/Count of Whether XAI is involved__pred by PubYear.png" alt="Count Image">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+
+</body>
+
+</html>
