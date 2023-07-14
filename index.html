@@ -23,15 +23,15 @@
 		padding: 20px;
 		/* 设置圆角 */
 		border-radius: 5px;
-
-
+		display: flex;
 	}
 
-	.news-content p {
+	.news-content div p {
 		/* 缩进2字符 */
 		/* text-indent: 2ch; */
-		text-align: left;
+		text-align: justify;
 		font-size: 20px;
+		color: rgb(160, 160, 160);
 		/* 设置字体大小 */
 		margin: 10px 0;
 		/* 设置外边距 */
@@ -40,12 +40,14 @@
 	}
 
 	ul li img {
-		display: inline;
+		display: block;
+		position: relative;
 		/* 将图片设置为块级元素 */
-		width: 50%;
+		width: 35%;
 		/* 图片宽度为100% */
 		height: auto;
 		/* 图片高度自适应 */
+		margin-left: 2.5%;
 	}
 </style>
 
@@ -65,6 +67,7 @@
 				<li class="menu-li project"><a href="#">Project</a>
 					<ul class="sub-menu">
 						<li><a href="chatgpt_with_XAI.html">chat-gpt with XAI</a></li>
+						<li><a href="chatgpt_with_fairAI.html">chat-gpt with fairAI</a></li>
 					</ul>
 				</li>
 				<li class="menu-li"><a href="#">Github</a></li>
@@ -89,86 +92,81 @@
 		</div> -->
 		<ul class="link-list">
 			<li>
-				<a href="chatgpt_with_XAI.html">chat-gpt with XAI</a>
+				<a href="chatgpt_with_XAI.html" style="font-size: 3vh;">chat-gpt with XAI</a>
 				<div class="news-content">
-					<p>
-						Explainable Artificial Intelligence (XAI) is a field that focuses on the interpretability
-						and
-						comprehensibility of
-						machine learning models. It aims to address the issue of "black box" models by providing
-						human-understandable
-						explanations and visualization tools that allow individuals to gain insights into the
-						model's
-						predictions and
-						decision-making processes. The goal of XAI is to open up the inner workings of the model,
-						enabling
-						users to understand
-						how it utilizes input data to make predictions and decisions, rather than solely accepting
-						its
-						outcomes. Through
-						interpretability, individuals can verify the accuracy, fairness, and reliability of the
-						model
-						and
-						identify potential
-						biases and unfairness. The importance of XAI lies in enhancing trust and acceptability in
-						artificial
-						intelligence
-						systems, facilitating effective communication and collaboration with users, and ensuring
-						that
-						the
-						decision-making
-						processes of AI systems are transparent, auditable, and understandable. With XAI, we can
-						build
-						more
-						trustworthy and
-						auditable AI systems, providing individuals with a means to comprehend and explain the
-						workings
-						of
-						the model for better
-						application and evaluation of its suitability in practical use cases.
-					</p>
+					<div style="width:60%; padding-right: 2.5%; border-right: 1px solid black;">
+						<p>
+							Explainable Artificial Intelligence (XAI) is a field that focuses on the interpretability
+							and
+							comprehensibility of
+							machine learning models. It aims to address the issue of "black box" models by providing
+							human-understandable
+							explanations and visualization tools that allow individuals to gain insights into the
+							model's
+							predictions and
+							decision-making processes. The goal of XAI is to open up the inner workings of the model,
+							enabling
+							users to understand
+							how it utilizes input data to make predictions and decisions, rather than solely accepting
+							its
+							outcomes. Through
+							interpretability, individuals can verify the accuracy, fairness, and reliability of the
+							model
+							and
+							identify potential
+							biases and unfairness. The importance of XAI lies in enhancing trust and acceptability in
+							artificial
+							intelligence
+							systems, facilitating effective communication and collaboration with users, and ensuring
+							that
+							the
+							decision-making
+							processes of AI systems are transparent, auditable, and understandable. With XAI, we can
+							build
+							more
+							trustworthy and
+							auditable AI systems, providing individuals with a means to comprehend and explain the
+							workings
+							of
+							the model for better
+							application and evaluation of its suitability in practical use cases.
+						</p>
+					</div>
+
+					<img src="./images/wordcloud1.png" alt="wordcloud">
+
 				</div>
 			</li>
 			<li>
-				<a href="chatgpt_with_fairAI.html">chat-gpt with fairAI</a>
+				<a href="chatgpt_with_fairAI.html" style="font-size: 3vh;">chat-gpt with fairAI</a>
 				<div class="news-content">
-					<p>
-						Fair AI, also known as Fairness in Artificial Intelligence, is an important area of research
-						and practice that focuses
-						on mitigating biases and promoting equitable outcomes in machine learning and AI systems. It
-						recognizes that AI models
-						and algorithms can inadvertently perpetuate and amplify existing social, cultural, and
-						historical biases present in the
-						data used for training. Fair AI aims to address these biases and ensure that AI systems
-						treat individuals fairly and
-						without discrimination based on sensitive attributes such as race, gender, age, or
-						socioeconomic status.
-					</p>
-					<p>
-						Fair AI involves developing techniques, methodologies, and evaluation metrics to measure and
-						quantify fairness in AI
-						systems. It seeks to identify and rectify biases that may arise from data collection,
-						preprocessing, feature selection,
-						or algorithmic decision-making. Fair AI also explores ways to incorporate fairness
-						considerations during the design,
-						development, and deployment phases of AI systems to minimize disparities and ensure
-						equitable outcomes across different
-						user groups.
-					</p>
-					<p>
-						The ultimate goal of Fair AI is to build AI systems that are transparent, accountable, and
-						unbiased, enabling equal
-						opportunities, access, and outcomes for all individuals. By promoting fairness in AI, we
-						strive to create a more
-						inclusive and just society where AI technologies are harnessed for the benefit of everyone,
-						regardless of their
-						background or characteristics.
-					</p>
+					<div style="width:60%; padding-right: 2.5%; border-right: 1px solid black;">
+						<p>
+							Fair AI, also known as Fairness in Artificial Intelligence, is an important area of research
+							and practice that focuses
+							on mitigating biases and promoting equitable outcomes in machine learning and AI systems. It
+							recognizes that AI models
+							and algorithms can inadvertently perpetuate and amplify existing social, cultural, and
+							historical biases present in the
+							data used for training. Fair AI aims to address these biases and ensure that AI systems
+							treat individuals fairly and
+							without discrimination based on sensitive attributes such as race, gender, age, or
+							socioeconomic status.
+						</p>
+						<p>
+							Fair AI involves developing techniques, methodologies, and evaluation metrics to measure and
+							quantify fairness in AI
+							systems. It seeks to identify and rectify biases that may arise from data collection,
+							preprocessing, feature selection,
+							or algorithmic decision-making. Fair AI also explores ways to incorporate fairness
+							considerations during the design,
+							development, and deployment phases of AI systems to minimize disparities and ensure
+							equitable outcomes across different
+							user groups.
+						</p>
+					</div>
+					<img src="./images/wordcloud2.jpg" alt="wordcloud">
 				</div>
-			</li>
-			<li>
-				<h3>wordcloud</h3>
-				<img src="./images/wordcloud.jpg" alt="wordcloud">
 			</li>
 		</ul>
 	</main>
